@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DataLayer.Entities.Urun>
+
+@{
+    ViewData["Title"] = "AktifUrunler";
+}
+
+<h1>AktifUrunler</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrunAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SonKullanmaTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParaBirimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aktiflik)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrunAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SonKullanmaTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fiyat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParaBirimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aktiflik)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

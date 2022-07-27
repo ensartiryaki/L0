@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DataLayer.Entities.Urun>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Urunler</h1>
+<div class="row">
+    <form asp-action="Index">
+        <div class="col-md-6">
+            Urun Adı: <input type="text" id="aranacakUrun" name="aranacakUrun" placeholder="Urun adı girin" />
+        </div>
+        <div class="col-md-6">
+            Tarih: <input type="date" id="skt" name="skt" />
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Ara" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-12">
+    <div>
+    <a asp-action="Create">Ürün Ekle</a> ||
+    <a asp-action="AktifUrunler">Aktif Ürünler</a>
+    </div>
+    </div>
+</div>
+<div id="ogrList" name="ogrList">
+    @Html.Partial("UrunListPartial", Model)
+</div>
+

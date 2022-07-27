@@ -1,0 +1,54 @@
+﻿@model DataLayer.Entities.Urun
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Urun</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UrunAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SonKullanmaTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SonKullanmaTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParaBirimi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParaBirimi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aktiflik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aktiflik)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
